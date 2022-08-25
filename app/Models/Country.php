@@ -24,7 +24,8 @@ public function idiomas(){
     //2.Tabla pivote
     //3.Clave foranea tabla pivote
     //4.FK del modelo a relacionar al pivote
-    return $this->belongsToMany(Languages::class,'country_languages','country_id','language_id');
+    return $this->belongsToMany(Languages::class,'country_languages','country_id','language_id')
+->withPivot('official');
 }
 
 }
